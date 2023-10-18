@@ -18,3 +18,15 @@ void	ft_putendl_fd(char *s, int fd)
 	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
 }
+
+// int main()
+// {
+//     char str[] = "ABCD";
+
+//     int fd = open("test.txt", O_RDWR | O_CREAT, 0666);
+//     if(fd == -1)
+//         printf("fd error");
+//     ft_putendl_fd(str, fd);
+//     close(fd);
+//     return 0;
+// }

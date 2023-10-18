@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+// void ft_transform(unsigned int index, char *c) {
+//     if (*c >= 'a' && *c <= 'z') {
+//         *c = *c - ('a' - 'A');
+//     }
+// }
+
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
@@ -23,3 +29,14 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
+
+// int main()
+// {
+//     char str[] = "abcd";
+
+//     ft_striteri(str, ft_transform);
+
+//     printf("%s\n", str);
+
+//     return 0;
+// }

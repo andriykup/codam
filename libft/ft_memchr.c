@@ -28,3 +28,15 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
+// int main()
+// {
+//     char str[] = "ABCD";
+
+//     void *pnt1 = ft_memchr(str, 'C', 5);
+//     printf("My func: %s\n", (unsigned char *)pnt1);
+//     void *pnt2 = memchr(str, 'C', 5);
+//     printf("OR function: %s\n", (unsigned char *)pnt2);
+
+//     return 0;
+// }

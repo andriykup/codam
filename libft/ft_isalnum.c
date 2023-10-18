@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h>
 
 int	ft_isalnum(int c)
 {
@@ -20,3 +19,19 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
+
+// int main()
+// {
+//     printf("My func:\n");
+//     printf("%d\n", ft_isalnum('a'));
+//     printf("%d\n", ft_isalnum('n'));
+//     printf("%d\n", ft_isalnum('v'));
+//     printf("%d\n", ft_isalnum('1'));
+//     printf("%d\n", ft_isalnum('.'));
+//     printf("Original func:\n");
+//     printf("%d\n", ft_isalnum('a'));
+//     printf("%d\n", ft_isalnum('n'));
+//     printf("%d\n", ft_isalnum('v'));
+//     printf("%d\n", ft_isalnum('1'));
+//     printf("%d\n", ft_isalnum('.'));
+// }

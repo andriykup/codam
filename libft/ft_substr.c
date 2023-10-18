@@ -18,6 +18,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*pnt;
 
 	i = 0;
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s) || len == 0)
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
 	pnt = (char *)malloc((len + 1) * sizeof(char));
 	if (!pnt)
 		return (NULL);
@@ -30,3 +36,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	pnt[i] = '\0';
 	return (pnt);
 }
+
+// int main()
+// {
+//     char str[] = "123456789";
+
+//     char *pnt = ft_substr(str, 3, 4);
+
+//     printf("%s\n", pnt);
+
+//     return 0;
+// }

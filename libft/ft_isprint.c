@@ -19,3 +19,15 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
+
+// int main()
+// {
+//     printf("My func:\n");
+//     printf("%d\n", ft_isprint(128));
+//     printf("%d\n", ft_isprint('1'));
+//     printf("%d\n", ft_isprint('g'));
+//     printf("Original func:\n");
+//     printf("%d\n", isprint(128));
+//     printf("%d\n", isprint('1'));
+//     printf("%d\n", isprint('g'));
+// }

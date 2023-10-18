@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+// size_t	ft_strlen(const char *s)
+// {
+// 	size_t	i;
+
+// 	i = 0;
+// 	while (s[i])
+// 		i++;
+// 	return (i);
+// }
+
 static int	isset(char c, char const *set)
 {
 	int	i;
@@ -51,3 +61,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ret[i] = '\0';
 	return (ret);
 }
+
+// int main()
+// {
+// 	char str[] = "AABC ASJDSAJ BBCAA";
+// 	char set[] = "AB";
+// 	char *pnt = ft_strtrim(str, set);
+
+// 	printf("%s\n", pnt);
+
+// 	return 0;
+// }

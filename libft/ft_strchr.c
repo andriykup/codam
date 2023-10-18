@@ -20,11 +20,21 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return ((char *)&s[i]);
 		i++;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)&s[i]);
 	return (NULL);
 }
+
+// int main()
+// {
+//     char str[] = "teste";
+
+//     printf("MY FUNC: %s\n", ft_strchr(str, '\0'));
+//     printf("OR FUNC: \n%s", strchr(str, '\0'));
+
+//     return 0;
+// }

@@ -60,3 +60,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ret[ret_i] = '\0';
 	return (ret);
 }
+
+// int main()
+// {
+//     char s1[] = "12345";
+//     char s2[] = "67890";
+
+//     char *pnt = ft_strjoin(s1, s2);
+
+//     printf("%s\n", pnt);
+
+//     return 0;
+// }

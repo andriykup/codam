@@ -19,3 +19,17 @@ int	ft_tolower(int c)
 		c = c + 32;
 	return (c);
 }
+
+// int main()
+// {
+//     char a = 'A';
+//     char b = 'B';
+
+//     printf("BEFORE:\na = %c\nb = %c\n\n", a, b);
+
+//     a = ft_tolower(a);
+//     b = tolower(b);
+
+//     printf("AFTER:\na = %c\nb = %c\n", a, b);
+
+// }
