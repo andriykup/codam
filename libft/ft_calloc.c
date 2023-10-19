@@ -14,21 +14,21 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	unsigned char	*pnt;
+	void	*ptr;
 
-	if (!(size > 0) || !(nmemb > 0))
+	ptr = malloc(nmemb * size);
+	if (!ptr)
 		return (NULL);
-	pnt = malloc(nmemb * size);
-	if (!pnt)
-		return (NULL);
-	ft_bzero(pnt, nmemb * size);
-	return (pnt);
+	ft_bzero(ptr, size * nmemb);
+	return (ptr);
 }
 
-// int main()
-// {
-//     void *str = ft_calloc(1, 0);
-// 	if(str == NULL)
-//     	printf("NULL");
-//     return 0;
-// }
+/*
+int main()
+{
+	void *str = ft_calloc(1, 0);
+		if(str == NULL)
+     	printf("NULL");
+	return 0;
+}
+*/
