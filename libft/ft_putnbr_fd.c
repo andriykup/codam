@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include<fcntl.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -36,17 +35,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(n + '0', fd);
 	}
 }
-
-// int main()
-// {
-//     int num = -4242;
-
-//     int fd = open("test.txt", O_CREAT | O_WRONLY, 0666);
-//     if(fd == -1)
-//         printf("fd error\n");
-
-//     ft_putnbr_fd(num, fd);
-
-//     close(fd);
-//     return 0;
-// }

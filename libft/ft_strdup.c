@@ -32,13 +32,3 @@ char	*ft_strdup(const char *s)
 	pnt[i] = '\0';
 	return (pnt);
 }
-
-// int main()
-// {
-//     char str[] = "ABCD";
-//     char *pnt = ft_strdup(str);
-
-//     printf("%s\n", pnt);
-
-//     return 0;
-// }

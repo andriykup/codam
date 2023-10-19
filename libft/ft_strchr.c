@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include<string.h>
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -28,13 +27,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (NULL);
 }
-
-// int main()
-// {
-//     char str[] = "teste";
-
-//     printf("MY FUNC: %s\n", ft_strchr(str, '\0'));
-//     printf("OR FUNC: \n%s", strchr(str, '\0'));
-
-//     return 0;
-// }

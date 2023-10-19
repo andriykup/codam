@@ -22,13 +22,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(ptr, size * nmemb);
 	return (ptr);
 }
-
-/*
-int main()
-{
-	void *str = ft_calloc(1, 0);
-		if(str == NULL)
-     	printf("NULL");
-	return 0;
-}
-*/

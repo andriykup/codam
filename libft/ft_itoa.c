@@ -67,12 +67,3 @@ char	*ft_itoa(int n)
 	}
 	return (ret);
 }
-
-// int main()
-// {
-//     int num = 7483648;
-
-//     printf("%s\n", ft_itoa(num));
-
-//     return 0;
-// }

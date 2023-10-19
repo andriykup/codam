@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <string.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -28,13 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-//     char str[] = "bonjournoabc";
-
-//     printf("MY func - %s\n", ft_strrchr(str, '\0'));
-//     printf("Origin func - %s\n", strrchr(str, '\0'));
-
-//     return 0;
-// }

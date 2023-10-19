@@ -11,14 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include<stdlib.h>
-
-// char ft_transform(unsigned int index, char c) {
-//     if (c >= 'a' && c <= 'z') {
-//         return c - ('a' - 'A');
-//     }
-//     return c;
-// }
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -39,14 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ret[i] = '\0';
 	return (ret);
 }
-
-// int main()
-// {
-//     char str[] = "abcd";
-
-//     char *pnt = ft_strmapi(str, ft_transform);
-
-//     printf("%s\n", pnt);
-
-//     return 0;
-// }
