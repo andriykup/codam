@@ -14,11 +14,20 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void	*ptr;
+	void	*pnt;
 
-	ptr = malloc(nmemb * size);
-	if (!ptr)
+	if(size != 0 && (nmemb * size) / size != nmemb)
 		return (NULL);
-	ft_bzero(ptr, size * nmemb);
-	return (ptr);
+	pnt = malloc(nmemb * size);
+	if (!pnt)
+		return (NULL);
+	ft_bzero(pnt, nmemb * size);
+	return (pnt);
 }
+
+// int main()
+// {
+//     printf("My func: %s\n", (char *)ft_calloc(5,-15));
+//     printf("My func: %s\n", (char *)calloc(5,-15));
+//     return 0;
+// }

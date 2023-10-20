@@ -81,7 +81,7 @@ char	**ft_split(char const *s, char c)
 	arr = (char **)malloc((words + 1) * sizeof(char *));
 	if (!arr)
 		return (NULL);
-	arr[words] = NULL;
+	arr[words] = 0;
 	while (s[i])
 	{
 		while (s[i] == c && s[i] != '\0')
@@ -93,3 +93,19 @@ char	**ft_split(char const *s, char c)
 	}
 	return (arr);
 }
+
+// int main()
+// {
+//     char str[] = " 123  123 12 2123";
+//     char c = ' ';
+
+//     char **ret = ft_split(str, c);
+//     int i = 0;
+//     while(ret[i])
+//     {
+//         printf("%s\n", ret[i]);
+//         i++;
+//     }  
+
+//     return 0;
+// }

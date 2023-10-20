@@ -36,3 +36,11 @@ int	ft_atoi(const char *nptr)
 	}
 	return (res * sign);
 }
+
+// int main()
+// {
+//     char str[] = " -12+34ab+-1";
+//     printf("My func: %d\n", ft_atoi(str));
+//     printf("OR func: %d\n", atoi(str));
+//     return 0;
+// }

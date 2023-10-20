@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <string.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -25,3 +26,14 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+// int main()
+// {
+//     char str1[] = "abc";
+//     char str2[] = "abc";
+
+//     printf("MY func: %d\n", ft_memcmp(str1, str2, 7));
+//     printf("OR func: %d\n", memcmp(str1, str2, 7));
+
+//     return 0;
+// }

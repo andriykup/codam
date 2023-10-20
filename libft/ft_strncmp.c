@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include<string.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -25,3 +26,14 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+
+// int main()
+// {
+//     char str1[] = "1234";
+//     char str2[] = "A11";
+
+//     printf("My func: %d\n", ft_strncmp(str1, str2, 3));
+//     printf("Or func: %d\n", strncmp(str1, str2, 3));
+
+//     return 0;
+// }

@@ -23,3 +23,23 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
+
+// int main()
+// {
+//     char str1[] = "AAAAAAAAAAAAAAAA";
+//     char str2[] = "AAAAAAAAAAAAAAAA";
+//     char str3[] = "AAAAAAAAAAAAAAAA";
+//     char str4[] = "AAAAAAAAAAAAAAAA";
+
+//     ft_bzero(str1, 5);
+//     ft_bzero(str2, 5);
+//     bzero(str3, 5);
+//     bzero(str4, 5);
+
+//     printf("%s\n", str1);
+//     printf("%s\n", str2);
+//     printf("%s\n", str3);
+//     printf("%s\n", str4);
+
+//     return (0);
+// }

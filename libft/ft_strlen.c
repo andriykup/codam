@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+// #include <string.h>
 
 size_t	ft_strlen(const char *s)
 {
@@ -21,3 +22,14 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
+
+// int main()
+// {
+//     printf("My func:\n");
+//     printf("%zu\n", ft_strlen("12345"));
+//     printf("%zu\n", ft_strlen("QWERTa"));
+
+//     printf("Original func:\n");
+//     printf("%zu\n", strlen("12345"));
+//     printf("%zu\n", strlen("QWERTa"));
+// }
