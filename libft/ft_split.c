@@ -88,7 +88,7 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (s[i] != c && s[i])
 			arr[j++] = get_word(s + i, c, &i);
-		if (arr[j - 1] == NULL)
+		if (arr[j - 1] == NULL && j > 0)
 			return (ft_free_memory(arr));
 	}
 	return (arr);
