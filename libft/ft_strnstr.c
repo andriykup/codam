@@ -35,14 +35,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-//     char str1[] = "ABCD";
-//     char str2[] = "D";
-
-//     printf("MY func: %s\n", ft_strnstr(str1, str2, 4));
-//     printf("OR func: %s\n", strnstr(str1, str2, 4));
-
-//     return 0;
-// }

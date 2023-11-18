@@ -24,10 +24,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(pnt, nmemb * size);
 	return (pnt);
 }
-
-// int main()
-// {
-//     printf("My func: %s\n", (char *)ft_calloc(5,-15));
-//     printf("My func: %s\n", (char *)calloc(5,-15));
-//     return 0;
-// }

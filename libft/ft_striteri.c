@@ -29,14 +29,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-// int main()
-// {
-//     char str[] = "abcd";
-
-//     ft_striteri(str, ft_transform);
-
-//     printf("%s\n", str);
-
-//     return 0;
-// }

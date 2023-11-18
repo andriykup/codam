@@ -19,19 +19,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
-// int main()
-// {
-//     printf("My func:\n");
-//     printf("%d\n", ft_isalpha('a'));
-//     printf("%d\n", ft_isalpha('1'));
-//     printf("%d\n", ft_isalpha('.'));
-//     printf("%d\n", ft_isalpha('b'));
-//     printf("%d\n", ft_isalpha('c'));
-//     printf("Original func:\n");
-//     printf("%d\n", isalpha('a'));
-//     printf("%d\n", isalpha('1'));
-//     printf("%d\n", isalpha('.'));
-//     printf("%d\n", isalpha('b'));
-//     printf("%d\n", isalpha('c'));
-// }

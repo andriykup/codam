@@ -36,14 +36,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	pnt[i] = '\0';
 	return (pnt);
 }
-
-// int main()
-// {
-//     char str[] = "123456789";
-
-//     char *pnt = ft_substr(str, 3, 4);
-
-//     printf("%s\n", pnt);
-
-//     return 0;
-// }

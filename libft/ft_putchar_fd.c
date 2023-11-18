@@ -17,20 +17,3 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
-// int main()
-// {
-//     char c = 'c';
-
-//     int fd = open("test.txt", O_WRONLY | O_CREAT);
-//     printf("fd = %d\n", fd); 
-
-//     if (fd == -1)
-//         printf("fd error :("); 
-
-//     ft_putchar_fd(c, fd);
-
-//     close(fd);
-
-//     return 0;
-// }

@@ -1,46 +1,60 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ankupins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/11 10:12:37 by ankupins          #+#    #+#             */
-/*   Updated: 2023/10/11 10:12:40 by ankupins         ###   ########.fr       */
+/*   Created: 2023/11/15 10:59:26 by ankupins          #+#    #+#             */
+/*   Updated: 2023/11/15 10:59:30 by ankupins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "get_next_line.h"
 
-static int	ft_length(char const *s1, char const *s2)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	int	i;
-	int	ret;
+	void	*pnt;
 
-	i = 0;
-	ret = 0;
-	while (s1[i])
-	{
-		i++;
-		ret++;
-	}
-	i = 0;
-	while (s2[i])
-	{
-		i++;
-		ret++;
-	}
-	return (ret);
+	if (size != 0 && (nmemb * size) / size != nmemb)
+		return (NULL);
+	pnt = malloc(nmemb * size);
+	if (!pnt)
+		return (NULL);
+	ft_bzero(pnt, nmemb * size);
+	return (pnt);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_bzero(void *s, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		((unsigned char *)s)[i] = 0;
+		i++;
+	}
+}
+
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
+char	*ft_strjoin(char *s1, char *s2)
 {
 	int		i;
 	int		ret_i;
 	char	*ret;
 	int		length;
 
-	length = ft_length(s1, s2);
+	length = ft_strlen(s1) + ft_strlen(s2);
 	ret = (char *)malloc((length + 1) * sizeof(char));
 	if (!ret)
 		return (NULL);
@@ -58,5 +72,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		ret_i++;
 	}
 	ret[ret_i] = '\0';
+	free (s1);
 	return (ret);
 }

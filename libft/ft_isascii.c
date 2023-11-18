@@ -19,19 +19,3 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-
-// int main()
-// {
-//     printf("My func:\n");
-//     printf("%d\n", ft_isascii('a'));
-//     printf("%d\n", ft_isascii(128));
-//     printf("%d\n", ft_isascii('v'));
-//     printf("%d\n", ft_isascii('1'));
-//     printf("%d\n", ft_isascii('.'));
-//     printf("Original func:\n");
-//     printf("%d\n", ft_isascii('a'));
-//     printf("%d\n", ft_isascii(128));
-//     printf("%d\n", ft_isascii('v'));
-//     printf("%d\n", ft_isascii('1'));
-//     printf("%d\n", ft_isascii('.'));
-// }

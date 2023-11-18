@@ -17,15 +17,3 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	write(fd, s, ft_strlen(s));
 }
-
-// int main()
-// {
-//     char str[] = "ABCD";
-
-//     int fd = open("test.txt", O_RDWR | O_CREAT, 0666);
-//     if(fd == -1)
-//         printf("fd error");	
-//     ft_putstr_fd(str, fd);	
-//     close(fd);
-//     return 0;
-// }
