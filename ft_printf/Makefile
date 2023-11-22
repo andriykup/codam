@@ -19,7 +19,7 @@ $(NAME): $(OBJS)
 
 clean:
 	-rm -fr $(OBJS)
-fclean:
+fclean: clean
 	-rm -fr $(NAME)
 re: fclean clean
 .PHONY: all clean fclean re
