@@ -21,5 +21,5 @@ clean:
 	-rm -fr $(OBJS)
 fclean: clean
 	-rm -fr $(NAME)
-re: fclean clean
+re: fclean all
 .PHONY: all clean fclean re
