@@ -17,6 +17,8 @@ static int	ft_endlinecheck(char *str)
 	int	i;
 
 	i = 0;
+	if (!str)
+		return (0);
 	while (str[i])
 	{
 		if (str[i] == '\n')
@@ -74,8 +76,8 @@ static char	*ft_processleftover(char *left_over)
 
 static char	*ft_read_line(int fd, char *left_over)
 {
-	char	temp[BUFFER_SIZE + 1];
-	int		char_read;
+	static char	temp[BUFFER_SIZE + 1];
+	int			char_read;
 
 	char_read = 1;
 	while (char_read > 0)
@@ -85,6 +87,8 @@ static char	*ft_read_line(int fd, char *left_over)
 			return (free (left_over), NULL);
 		temp[char_read] = '\0';
 		left_over = ft_strjoin(left_over, temp);
+		if (!left_over)
+			return (NULL);
 		if (ft_endlinecheck(left_over) == 1)
 			break ;
 	}
