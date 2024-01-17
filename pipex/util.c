@@ -12,6 +12,13 @@
 
 #include "pipex.h"
 
+void	exit_error(char *err)
+{
+	write(2, err, ft_strlen(err));
+	write(2, "\n", 1);
+	exit(EXIT_FAILURE);
+}
+
 void	free_mem(char **paths_envp)
 {
 	int	y;
@@ -23,56 +30,6 @@ void	free_mem(char **paths_envp)
 		y++;
 	}
 	free (paths_envp);
-}
-
-void	exec_child_process_1(int f1, int *end, char **argv, char **paths_envp)
-{
-	char	**cmd_args;
-	char	*cmd_path;
-
-	if (dup2(f1, STDIN_FILENO) == -1)
-		return (perror("dup2 error"));
-	if (dup2(end[1], STDOUT_FILENO) == -1)
-		return (perror("dup2 error"));
-	close(end[0]);
-	close(end[1]);
-	close(f1);
-	cmd_args = ft_split(argv[2], ' ');
-	if (cmd_args == NULL)
-		return (perror("error while splitting cmd args"));
-	cmd_path = find_cmd_path(paths_envp, cmd_args[0]);
-	if (cmd_path == NULL)
-	{
-		free(cmd_args);
-		return (perror("error while finding cmd path"));
-	}
-	if ((execve(cmd_path, cmd_args, NULL)) == -1)
-		exit(EXIT_FAILURE);
-}
-
-void	exec_child_process_2(int f2, int *end, char **argv, char **paths_envp)
-{
-	char	**cmd_args;
-	char	*cmd_path;
-
-	if (dup2(f2, STDOUT_FILENO) == -1)
-		return (perror("dup2 error"));
-	if (dup2(end[0], STDIN_FILENO) == -1)
-		return (perror("dup2 error"));
-	close(end[0]);
-	close(end[1]);
-	close(f2);
-	cmd_args = ft_split(argv[3], ' ');
-	if (cmd_args == NULL)
-		return (perror("error while splitting cmd args"));
-	cmd_path = find_cmd_path(paths_envp, cmd_args[0]);
-	if (cmd_path == NULL)
-	{
-		free(cmd_args);
-		return (perror("error while finding cmd path"));
-	}
-	if ((execve(cmd_path, cmd_args, NULL)) == -1)
-		exit(EXIT_FAILURE);
 }
 
 char	**get_env_path(char **envp)
@@ -96,7 +53,11 @@ char	*find_cmd_path(char **paths_envp, char *cmd)
 	char	*full_cmd;
 	char	*ret;
 
+	if (paths_envp == NULL)
+		return (NULL);
 	full_cmd = ft_strjoin("/", cmd);
+	if (full_cmd == NULL)
+		return (NULL);
 	i = 0;
 	while (paths_envp[i])
 	{
