@@ -19,7 +19,7 @@ UNL = "\033[4m"
 ######## ------------- ########
 
 NAME = philo
-CC = cc -pthread #-fsanitize=thread -g #-fsanitize=address -g
+CC = cc #-fsanitize=thread -g #-fsanitize=address -g
 CFLAGS = -Wall -Werror -Wextra
 OBJS = $(SRC:.c=.o)
 

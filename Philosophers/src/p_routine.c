@@ -66,8 +66,13 @@ void	*p_routine(void *p_pointer)
 		return (NULL);
 	while (true)
 	{
+		pthread_mutex_lock(&philos->program->dead_lock);
 		if (philos->program->dead_flag == 1)
+		{
+			pthread_mutex_unlock(&philos->program->dead_lock);
 			break ;
+		}
+		pthread_mutex_unlock(&philos->program->dead_lock);
 		p_eating(philos);
 		if (philos->program->num_times_to_eat != -1)
 		{
