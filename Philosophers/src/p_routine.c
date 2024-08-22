@@ -28,7 +28,7 @@ static int	start_routine(t_philo *philos)
 		only_one_philo(philos);
 		return (1);
 	}
-	if (philos->id % 2 == 0)
+	if (philos->id % 2 != 0)
 	{
 		ft_message_print("is thinking", philos);
 		usleep(philos->program->time_to_sleep * 1000 / 4);

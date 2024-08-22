@@ -71,8 +71,8 @@ int		get_current_time(void);
 
 //exit & clean & print
 void	ft_message_print(char *message, t_philo *philos);
-void	f_wrong_value_exit(void);
-void	f_wrong_argv_exit(void);
+int		f_wrong_value_exit(void);
+int		f_wrong_argv_exit(void);
 void	after_party_clean(t_program *program, pthread_mutex_t *forks);
 
 #endif

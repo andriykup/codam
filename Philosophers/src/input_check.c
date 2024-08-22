@@ -12,12 +12,6 @@
 
 #include "../philo.h"
 
-static void	ft_error_exit(void)
-{
-	write(1, "int overflow :(\n", 16);
-	exit (1);
-}
-
 static int	ft_atoi(char *nptr)
 {
 	int	i;
@@ -39,7 +33,7 @@ static int	ft_atoi(char *nptr)
 	{
 		res = res * 10 + nptr[i] - 48;
 		if (res < 0)
-			ft_error_exit();
+			return (-1);
 		i++;
 	}
 	return (res * sign);
@@ -59,13 +53,13 @@ static int	argv_check(char *str)
 	return (0);
 }
 
-static void	input_parsing(char **argv, t_program *program)
+static int	input_parsing(char **argv, t_program *program)
 {
 	program->num_of_philos = ft_atoi(argv[1]);
 	if (program->num_of_philos > 200)
 	{
 		write(2, "to much philosophers, please keep it below 201\n", 47);
-		exit (4);
+		return (-1);
 	}
 	program->time_to_die = ft_atoi(argv[2]);
 	program->time_to_eat = ft_atoi(argv[3]);
@@ -73,11 +67,19 @@ static void	input_parsing(char **argv, t_program *program)
 	if (program->time_to_die < 60
 		|| program->time_to_eat < 60
 		|| program->time_to_sleep < 60)
+	{
 		f_wrong_value_exit();
+		return (-1);
+	}
 	if (argv[5] != NULL)
+	{
 		program->num_times_to_eat = ft_atoi(argv[5]);
+		if (program->num_times_to_eat == -1)
+			return (-1);
+	}
 	else
 		program->num_times_to_eat = -1;
+	return (0);
 }
 
 int	input_check(int argc, char **argv, t_program *program)
@@ -94,6 +96,7 @@ int	input_check(int argc, char **argv, t_program *program)
 		}
 		i++;
 	}
-	input_parsing(argv, program);
+	if (input_parsing(argv, program) == -1)
+		return (-1);
 	return (0);
 }

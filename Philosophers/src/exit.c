@@ -28,17 +28,17 @@ void	after_party_clean(t_program *program, pthread_mutex_t *forks)
 	pthread_mutex_destroy(&program->last_meal_lock);
 }
 
-void	f_wrong_value_exit(void)
+int	f_wrong_value_exit(void)
 {
-	write(1, ">>> provided values are too low\n", 32);
-	exit (3);
+	write(1, ">>> provided values are too low or you int overflow\n", 52);
+	return (3);
 }
 
-void	f_wrong_argv_exit(void)
+int	f_wrong_argv_exit(void)
 {
 	write(1, ">>> incorrect amount of arguments :(\n", 37);
 	write(1, ">>> EXAMPLE:\n", 13);
 	write(1, "./philo <N of philosophers> <time to die> <time to eat>", 55);
 	write(1, " <time to sleep> <must eat N of time>\n", 38);
-	exit (1);
+	return (3);
 }

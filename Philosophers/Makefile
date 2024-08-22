@@ -19,9 +19,8 @@ UNL = "\033[4m"
 ######## ------------- ########
 
 NAME = philo
-CC = cc #-fsanitize=thread -g #-fsanitize=address -g
+CC = cc #-fsanitize=thread -g
 CFLAGS = -Wall -Werror -Wextra
-OBJS = $(SRC:.c=.o)
 
 SRC = \
 	main.c \
@@ -34,12 +33,18 @@ SRC = \
 	./src/exit.c \
 	./src/print.c \
 
+OBJS = $(SRC:.c=.o)
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
 		@echo $(GRN)"Compiling..." $(YEL)$(NAME)$(RST)
-		$(CC) $(CFLAGS) $(SRC) -o $(NAME)
+		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 		@echo $(GRN)"\n\n			Compilation Completed :)\n\n" $(RST)
+
+.c.o:
+		@echo $(CYN)"Compiling:" $(WHT)$<$(RST)
+		$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 		@echo $(RED)"removing object files"$(RST)
